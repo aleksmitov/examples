@@ -16,10 +16,3 @@ features:
     description: "Messages"
     source: message/feature.py
     environment: message/requirements.txt
-
-schema:
-  # All of the features above should include this primary key. It will be used to join the features
-  # together.
-  primary_keys: ["id"]
-
-
