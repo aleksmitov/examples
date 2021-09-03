@@ -14,3 +14,4 @@ description: "My Features"
 features: []
 
 materialization:
+    target: layer-public-datasets
