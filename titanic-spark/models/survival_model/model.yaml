@@ -4,7 +4,7 @@ name: "Spark_titanic"
 description: "Titanic Spark model"
 training:
   name: "Spark_titanic_training"
-  description: "Spark titanic model training"
+  description: "Spark titanic-sql model training"
   # The source model definition file with a `train_model` method
   entrypoint: model.py
   # File includes the required python libraries with their correct versions

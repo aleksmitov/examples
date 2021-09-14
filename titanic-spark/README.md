@@ -40,7 +40,7 @@ layer start
 │   │   ├── title.sql				# Title of the passenger
 │   │   └── dataset.yml				# Declares the metadata of the features above
 │   └── titanic_data
-│       └── dataset.yml				# Declares where our source `titanic` dataset is
+│       └── dataset.yml				# Declares where our source `titanic-sql` dataset is
 ├── models
 │   └── survival_model
 │       ├── model.yml				# Training directives of our model

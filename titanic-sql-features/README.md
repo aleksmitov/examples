@@ -16,7 +16,7 @@ To check out the Layer Titanic Survival example, run:
 
 ```bash
 layer clone https://github.com/layerml/examples
-cd examples/titanic/
+cd examples/titanic-sql-features/
 ```
 
 To run the project:
@@ -41,7 +41,7 @@ layer start
 │   │   ├── title.sql				# Title of the passenger
 │   │   └── dataset.yaml				# Declares the metadata of the features above
 │   └── titanic_data
-│       └── dataset.yaml				# Declares where our source `titanic` dataset is
+│       └── dataset.yaml				# Declares where our source `titanic-sql` dataset is
 ├── models
 │   └── survival_model
 │       ├── model.yaml				# Training directives of our model

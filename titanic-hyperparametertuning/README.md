@@ -24,7 +24,7 @@ To check out the Layer Titanic Survival example, run:
 
 ```bash
 layer clone https://github.com/layerml/examples
-cd examples/titanic/hyperparametertuning
+cd examples/titanic-hyperparametertuning
 ```
 
 
