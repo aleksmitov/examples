@@ -17,7 +17,7 @@ def clean_age(data):
         return age
 
 
-def build_feature(sdf: Dataset("titanic-sql")) -> Any:
+def build_feature(sdf: Dataset("titanic")) -> Any:
     df = sdf.to_pandas()
     feature_data = df[["PASSENGERID", "AGE","PCLASS"]]
     age = feature_data[['AGE', 'PCLASS']].apply(clean_age, axis=1)

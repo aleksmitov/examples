@@ -12,7 +12,7 @@ def clean_sex(sex):
     return result
 
 
-def build_feature(sdf: Dataset("titanic-sql")) -> Any:
+def build_feature(sdf: Dataset("titanic")) -> Any:
     df = sdf.to_pandas()
     feature_data = df[["PASSENGERID", "SEX"]]
     sex = df['SEX'].apply(clean_sex)
