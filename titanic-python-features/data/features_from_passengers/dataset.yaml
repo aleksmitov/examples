@@ -20,17 +20,9 @@ features:
     description: "The embark status of the passenger. (S=0, C=1, Q=2)"
     source: embarked.py
     environment: requirements.txt
-  - name: fareband
-    description: "4 different fare buckets (0, 7.91, 14.454, 31+)"
-    source: fareband.py
-    environment: requirements.txt
   - name: sex
     description: "Sex vector (0=Female, 1=Male)"
     source: sex.py
-    environment: requirements.txt
-  - name: survived
-    description: "Whether the passenger survived or not."
-    source: survived.py
     environment: requirements.txt
 
 materialization:

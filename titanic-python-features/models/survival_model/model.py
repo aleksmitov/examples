@@ -9,10 +9,10 @@ from typing import Any
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from layer import Featureset, Train
+from layer import Featureset, Train, Dataset
 
 
-def train_model(train: Train, pf: Featureset("features_from_passengers")) -> Any:
+def train_model(train: Train, ds:Dataset("titanic"), pf: Featureset("features_from_passengers")) -> Any:
     """Model train function
 
     This function is a reserved function and will be called by Layer
@@ -32,9 +32,10 @@ def train_model(train: Train, pf: Featureset("features_from_passengers")) -> Any
        model: Trained model object
 
     """
-    df = pf.to_pandas()
-
-    X = df.drop(["PASSENGERID", "SURVIVED"], axis=1)
+    dataset = ds.to_pandas()
+    dataset = dataset.drop(["EMBARKED","AGE","SEX"],axis=1)
+    df = dataset.merge(pf.to_pandas(), on='PASSENGERID')
+    X = df.drop(["PASSENGERID", "NAME", "CABIN", "TICKET", "SURVIVED"], axis=1)
     y = df["SURVIVED"]
 
     # Split dataset into training set and test set
