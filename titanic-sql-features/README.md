@@ -16,7 +16,7 @@ To check out the Layer Titanic Survival example, run:
 
 ```bash
 layer clone https://github.com/layerml/examples
-cd examples/titanic/
+cd examples/titanic-sql-features/
 ```
 
 To run the project:
