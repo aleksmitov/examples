@@ -4,7 +4,7 @@ A classification example with `Spark ML` for predicting the survivals of the Tit
 
 ## What we are going to learn?
 
-- Feature Store: We are going to use SQL queries to build the `passenger` features.
+- Feature Store: We are going to use PySpark interface to build the `passenger` features.
 - Load `passenger` features and use it to train our `survival` model
 - Experimentation tracking with
     - logging `BinaryClassificationEvaluator` metric
@@ -31,13 +31,13 @@ layer start
 ├── .layer
 ├── data
 │   ├── passenger_features	                # feature definitions
-│   │   ├── ageband.sql				# Age Band of the passenger
-│   │   ├── embarked.sql  			# Embarked or not
-│   │   ├── fareband.sql			# Fare Band of the passenger
-│   │   ├── is_alone.sql			# Is Passenger travelling alone
-│   │   ├── sex.sql				# Sex of the passenger
-│   │   ├── survived.sql 			# Survived or not
-│   │   ├── title.sql				# Title of the passenger
+│   │   ├── ageband.py				# Age Band of the passenger
+│   │   ├── embarked.py  			# Embarked or not
+│   │   ├── fareband.py			# Fare Band of the passenger
+│   │   ├── is_alone.py			# Is Passenger travelling alone
+│   │   ├── sex.py				# Sex of the passenger
+│   │   ├── survived.py 			# Survived or not
+│   │   ├── title.py				# Title of the passenger
 │   │   └── dataset.yml				# Declares the metadata of the features above
 │   └── titanic_data
 │       └── dataset.yml				# Declares where our source `titanic` dataset is
