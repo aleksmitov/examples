@@ -25,4 +25,5 @@ def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
                                                           .when((col("Age") > 48) & (col("Age") <= 64), 3)
                                                           .otherwise(4))
 
+    # Convert Spark DataFrame into Pandas DataFrame
     return passengers_age_band_df.select("PassengerId", "AgeBand").toPandas()

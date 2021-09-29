@@ -6,6 +6,7 @@ A classification example with `Spark ML` for predicting the survivals of the Tit
 
 - Feature Store: We are going to use PySpark interface to build the `passenger` features 
 - Utilize `SparkSession` from Layer `Context` for Spark SQL queries (i.e. `title` feature)
+- Convert Spark DataFrames into Pandas DataFrames as the way Layer stores the features
 - Load `passenger` features and use it to train our `survival` model
 - Experimentation tracking with
     - logging `BinaryClassificationEvaluator` metric

@@ -10,4 +10,5 @@ def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
     family_size_df = passengers_df.withColumn("FamilySize", col("SibSp") + col("Parch") + 1)
     is_alone_df = family_size_df.withColumn("IsAlone", when(col("FamilySize") == 1, 1).otherwise(0))
 
+    # Convert Spark DataFrame into Pandas DataFrame
     return is_alone_df.select("PassengerId", "IsAlone").toPandas()

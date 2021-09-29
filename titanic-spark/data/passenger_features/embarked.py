@@ -12,4 +12,5 @@ def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
                                            .when(col("Embarked") == "Q", 2)
                                            .otherwise(3))
 
+    # Convert Spark DataFrame into Pandas DataFrame
     return embarked_df.select("PassengerId", "EmbarkStatus").toPandas()

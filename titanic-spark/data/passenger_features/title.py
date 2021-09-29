@@ -33,4 +33,5 @@ def build_feature(context: Context, passengers: Dataset("titanic_dataset")) -> A
         FROM titleDF
     """)
 
+    # Convert Spark DataFrame into Pandas DataFrame
     return title_df.select("PassengerId", "Title").toPandas()

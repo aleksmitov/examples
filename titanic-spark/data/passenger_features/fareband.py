@@ -12,4 +12,5 @@ def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
                                             .when((col("Fare") > 14.454) & (col("Fare") <= 31), 2)
                                             .otherwise(3))
 
+    # Convert Spark DataFrame into Pandas DataFrame
     return fare_band_df.select("PassengerId", "FareBand").toPandas()
