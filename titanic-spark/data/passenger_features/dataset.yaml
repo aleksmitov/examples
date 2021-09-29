@@ -34,6 +34,10 @@ features:
     description: "Sex vector (0=Female, 1=Male)"
     source: sex.py
     environment: requirements.txt
+  - name: title
+    description: "Extracts the title of the passenger from their name (`Zabour, Miss. Hileni` > `Miss`)"
+    source: title.py
+    environment: requirements.txt
   - name: survived
     description: "Whether the passenger survived or not."
     source: survived.py

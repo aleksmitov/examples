@@ -10,7 +10,7 @@ from layer import Featureset, Train
 def train_model(train: Train, pf: Featureset("passenger_features_spark")) -> Any:
     passenger_df = pf.to_spark()
 
-    feat_cols = ['AgeBand', 'EmbarkStatus', 'FareBand', 'IsAlone', 'Sex']
+    feat_cols = ['AgeBand', 'EmbarkStatus', 'FareBand', 'IsAlone', 'Sex', 'Title']
     label_col = 'Survived'
 
     vec_assember = VectorAssembler(inputCols=feat_cols, outputCol='features')
