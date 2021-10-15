@@ -7,10 +7,9 @@ from layer import Dataset
 
 def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
     passengers_df = passengers.to_spark()
-    fare_band_df = passengers_df.withColumn("FareBand", when(col("Fare") <= 7.91, 0)
+    fare_band_df = passengers_df.withColumn("FARE_BAND", when(col("Fare") <= 7.91, 0)
                                             .when((col("Fare") > 7.91) & (col("Fare") <= 14.454), 1)
                                             .when((col("Fare") > 14.454) & (col("Fare") <= 31), 2)
                                             .otherwise(3))
 
-    # Convert Spark DataFrame into Pandas DataFrame
-    return fare_band_df.select("PassengerId", "FareBand").toPandas()
+    return fare_band_df.select("PASSENGERID", "FARE_BAND")
