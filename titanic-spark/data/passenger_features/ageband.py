@@ -9,21 +9,20 @@ def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
     passengers_df = passengers.to_spark()
 
     avg_age_df = passengers_df \
-        .filter(col("Age"). isNotNull()) \
+        .filter(col("Age").isNotNull()) \
         .groupBy("PClass", "Sex") \
         .agg(avg("Age").alias("AvgAge")) \
         .select("PClass", "Sex", "AvgAge")
 
     passengers_age_df = passengers_df.join(avg_age_df, ["PClass", "Sex"], "left") \
-        .select("PassengerId",
+        .select("PASSENGERID",
                 when(col("Age").isNull(), col("AvgAge")).otherwise(col("Age")).alias("Age")
                 )
 
-    passengers_age_band_df = passengers_age_df.withColumn("AgeBand", when(col("Age") <= 16, 0)
+    passengers_age_band_df = passengers_age_df.withColumn("AGE_BAND", when(col("Age") <= 16, 0)
                                                           .when((col("Age") > 16) & (col("Age") <= 32), 1)
                                                           .when((col("Age") > 32) & (col("Age") <= 48), 2)
                                                           .when((col("Age") > 48) & (col("Age") <= 64), 3)
                                                           .otherwise(4))
 
-    # Convert Spark DataFrame into Pandas DataFrame
-    return passengers_age_band_df.select("PassengerId", "AgeBand").toPandas()
+    return passengers_age_band_df.select("PASSENGERID", "AGE_BAND")

@@ -7,7 +7,6 @@ from layer import Dataset
 
 def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
     passengers_df = passengers.to_spark()
-    sex_df = passengers_df.withColumn("Sex", when(col("Sex") == "male", 1).otherwise(0))
+    sex_df = passengers_df.withColumn("SEX", when(col("Sex") == "male", 1).otherwise(0))
 
-    # Convert Spark DataFrame into Pandas DataFrame
-    return sex_df.select("PassengerId", "Sex").toPandas()
+    return sex_df.select("PASSENGERID", "SEX")
