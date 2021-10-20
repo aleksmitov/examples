@@ -7,7 +7,7 @@ from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from layer import Featureset, Train
 
 
-def train_model(train: Train, pf: Featureset("spark_passenger_features")) -> Any:
+def train_model(train: Train, pf: Featureset("modified_passenger_features")) -> Any:
     passenger_df = pf.to_spark()
 
     feat_cols = ['AgeBand', 'EmbarkStatus', 'FareBand', 'IsAlone', 'Title']
