@@ -3,7 +3,7 @@ from typing import Any
 
 
 def build_feature() -> Any:
-    # Convert Layer featuresets into Spark
+    # Fetch "passenger_features_spark" featureset into Spark DataFrame
     titanic_features = layer.get_featureset("passenger_features_spark").to_spark()
     titanic_features = titanic_features.drop("Sex")
 
