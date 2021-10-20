@@ -4,7 +4,8 @@ A classification example with `Spark ML` for predicting the survivals of the Tit
 
 ## What we are going to learn?
 
-- Feature Store: We are going to use PySpark interface to build the `passenger` features 
+- How to use existing features to create a new `featureset` in Spark. The project depends on the `passenger_features_spark` featureset. 
+Feature Store: We are going to use PySpark interface to build the `passenger` features 
 - Utilize `SparkSession` from Layer `Context` for Spark SQL queries (i.e. `title` feature)
 - Convert Spark DataFrames into Pandas DataFrames as the way Layer stores the features
 - Load `passenger` features and use it to train our `survival` model
@@ -17,7 +18,7 @@ To check out the Layer Titanic Survival example, run:
 
 ```bash
 layer clone https://github.com/layerml/examples
-cd examples/titanic-spark
+cd examples/spark-titanic-reuse-features
 ```
 
 To run the project:

@@ -5,6 +5,7 @@ from typing import Any
 def build_feature() -> Any:
     # Convert Layer featuresets into Spark
     titanic_features = layer.get_featureset("passenger_features_spark").to_spark()
+    titanic_features = titanic_features.drop("Sex")
 
     # Building a new featureset
     return titanic_features
