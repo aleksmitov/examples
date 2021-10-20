@@ -1,0 +1,23 @@
+# Any directory includes an `dataset.yaml` will be treated as a dataset
+# project. In this `yaml` file, we will define the attributes of our
+# featureset.
+
+apiVersion: 1
+
+type: featureset
+
+name: "spark_passenger_features"
+description: "Passenger features from Titanic Dataset"
+
+# Name of the predefined fabric config for all features.
+# Documentation (https://docs.beta.layer.co/docs/reference/fabrics)
+fabric: "f-spark-xsmall"
+
+features:
+  - name: features
+    description: "Fetch all features"
+    source: features.py
+    environment: requirements.txt
+
+materialization:
+    target: layer-public-datasets
