@@ -29,9 +29,8 @@ def build_feature(context: Context, passengers: Dataset("titanic_dataset")) -> A
                 WHEN parsedTitle = "Mrs" THEN 3
                 WHEN parsedTitle = "Master" THEN 4
                 WHEN parsedTitle = "Rare" THEN 5
-            END as Title
+            END as TITLE
         FROM titleDF
     """)
 
-    # Convert Spark DataFrame into Pandas DataFrame
-    return title_df.select("PassengerId", "Title").toPandas()
+    return title_df.select("PASSENGERID", "TITLE")

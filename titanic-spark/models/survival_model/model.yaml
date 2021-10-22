@@ -10,5 +10,4 @@ training:
   entrypoint: model.py
   # File includes the required python libraries with their correct versions
   environment: requirements.txt
-  fabric: f-spark-small
-  
+  fabric: "f-spark-xsmall"
