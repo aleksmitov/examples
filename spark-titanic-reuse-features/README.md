@@ -12,7 +12,7 @@ Feature Store: We are going to use PySpark interface to build the `passenger` fe
 - Experimentation tracking with
     - logging `BinaryClassificationEvaluator` metric
 
-## Installation & Running
+## Install and run
 
 To check out the Layer Titanic Survival example, run:
 
