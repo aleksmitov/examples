@@ -10,12 +10,12 @@ from layer import Featureset, Train, Dataset
 from PIL import Image
 import io
 import base64
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
-from keras.callbacks import EarlyStopping
-from keras import Sequential
-from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 
 def train_model(train: Train, ds:Dataset("catsdogs"), pf: Featureset("cat_and_dog_features")) -> Any:
@@ -80,6 +80,8 @@ def train_model(train: Train, ds:Dataset("catsdogs"), pf: Featureset("cat_and_do
 
     ]
     epochs = 10
+    train.log_parameter("epochs", epochs)
+
     model.fit(
         training_data,
         epochs=epochs,
