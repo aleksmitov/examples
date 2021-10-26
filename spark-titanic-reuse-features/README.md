@@ -14,7 +14,7 @@ Feature Store: We are going to use PySpark interface to build the `passenger` fe
 
 ## Install and run
 
-To check out the Layer Titanic Survival example, run:
+To check out the Layer example repository, run:
 
 ```bash
 layer clone https://github.com/layerml/examples
