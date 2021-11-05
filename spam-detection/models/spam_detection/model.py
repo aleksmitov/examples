@@ -11,7 +11,7 @@ from sklearn.metrics import (
 )
 
 
-def train_model(train: Train, model: Model("vectorizer"), sf: Featureset("sms_featureset")) -> Any:
+def train_model(train: Train, model: Model("tfidf_vectorizer"), sf: Featureset("sms_featureset")) -> Any:
 
     data = sf.to_pandas()
     vectorizer = model.get_train()

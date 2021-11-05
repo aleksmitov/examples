@@ -6,11 +6,11 @@
 apiVersion: 1
 
 # Name and description of our model
-name: "vectorizer"
+name: "tfidf_vectorizer"
 description: "Vectorizer model"
 
 training:
-  name: "vectorizer_training"
+  name: "tfidf_vectorizer_training"
   description: "Vectorizer model training"
 
   # The source model definition file with a `train_model` method
