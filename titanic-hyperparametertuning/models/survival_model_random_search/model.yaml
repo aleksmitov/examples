@@ -20,7 +20,7 @@ training:
   # `accuracy` metric which we logged in the `model.py`
   hyperparameters:
     strategy: "Random"
-    max_jobs: 3
+    max_trials: 3
     maximize: "accuracy"
     tuning:
       n_estimators:
