@@ -1,4 +1,5 @@
 # Spam Detection Project Example
+# Datasets are created by defining  a .yaml with any name and adding type:dataset.
 
 apiVersion: 1
 

@@ -1,8 +1,5 @@
 # Titanic Survival Project Example
-#
-# Any directory includes an `dataset.yaml` will be treated as a dataset
-# project. In this `yaml` file, we will define the attributes of our
-# featureset.
+# Featuresets are created by defining  a .yaml with any name and adding type:featureset.
 
 apiVersion: 1
 

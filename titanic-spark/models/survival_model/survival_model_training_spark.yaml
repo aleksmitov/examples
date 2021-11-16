@@ -1,3 +1,5 @@
+# Models are created by defining  a .yaml with any name and adding type:model.
+
 apiVersion: 1
 # Name and description of our model
 name: "survival_model_spark"
