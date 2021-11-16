@@ -1,5 +1,5 @@
 # Fraud Detection Project Example
-#  Models are created by defining  a .yaml with any name and adding type:model.
+#  Models are created by defining  a `.yaml` with any name and adding `type:model`
 
 apiVersion: 1
 

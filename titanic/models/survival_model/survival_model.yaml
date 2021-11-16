@@ -1,5 +1,5 @@
 # Titanic Survival Project Example
-#Models are created by defining  a .yaml with any name and adding type:model.
+# Models are created by defining  a `.yaml` with any name and adding `type: model`
 # Any directory includes an `model.yaml` will be treated as a ml model project.
 # In this `yaml` file, we will define the attributes of our model.
 

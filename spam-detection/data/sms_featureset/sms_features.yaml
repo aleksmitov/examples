@@ -1,5 +1,5 @@
 # Spam Detection Project Example
-# Featuresets are created by defining  a .yaml with any name and adding type:featureset.
+# Featuresets are created by defining  a `.yaml` with any name and adding `type:featureset`
 
 apiVersion: 1
 

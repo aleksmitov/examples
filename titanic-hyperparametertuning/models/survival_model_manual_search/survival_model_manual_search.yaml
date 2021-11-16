@@ -1,6 +1,5 @@
 # Titanic Survival Project Example
-#
-# Any directory includes an `model.yml` will be treated as a ml model project.
+# Models are created by defining  a `.yaml` with any name and adding `type:model`
 # In this `yaml` file, we will define the attributes of our model.
 
 apiVersion: 1

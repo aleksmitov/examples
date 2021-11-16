@@ -1,5 +1,5 @@
 # Churn Prediction Example
-# Featurests are created by defining  a .yaml with any name and adding type:featureset..
+# Featurests are created by defining  a `.yaml` with any name and adding `type:featureset`
 
 apiVersion: 1
 
