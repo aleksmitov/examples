@@ -8,6 +8,7 @@ apiVersion: 1
 # Name and description of our model
 name: "spam_detection"
 description: "Spam detection model"
+type: model
 
 training:
   name: "spam_detection_training"

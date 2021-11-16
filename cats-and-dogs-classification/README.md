@@ -30,18 +30,21 @@ layer start
 | |____project.yaml
 |____models
 | |____model
-| | |____model.yaml
+| | |____cats_dogs_model.yaml
 | | |____requirements.txt
 | | |____model.py
 |____README.md
 |____data
 | |____dataset
-| | |____dataset.yaml
+| | |____cats_dogs_data.yaml
 | |____features
 | | |____category
 | | | |____requirements.txt
 | | | |____category.py
-| | |____dataset.yaml
+| | |____cat_dog_features.yaml
+|____notebooks
+| |____catsdogs.ipynb
+
 
 
 ```
