@@ -32,28 +32,28 @@ layer start
 ```yaml
 .
 |____.layer
-| |____project.yaml
+| |____project.yaml # Project configuration file
 |____models
 | |____survival_model
-| | |____requirements.txt
-| | |____model.py
-| | |____survival_model_training_spark.yaml
+| | |____requirements.txt # Environment config file
+| | |____model.py  # Source code of the `Survival` model
+| | |____survival_model_training_spark.yaml # Training directives of our model
 |____README.md
 |____data
 | |____titanic_data
-| | |____titanic_dataset.yaml
-| |____passenger_features
-| | |____requirements.txt
-| | |____passenger_features_spark.yaml
-| | |____sex.py
-| | |____ageband.py
-| | |____is_alone.py
-| | |____survived.py
-| | |____embarked.py
-| | |____fareband.py
-| | |____title.py
+| | |____titanic_dataset.yaml  # Declares where our source `titanic` dataset is
+| |____passenger_features     # feature definitions
+| | |____requirements.txt     # Environment config file
+| | |____passenger_features_spark.yaml # Declares the metadata of the features
+| | |____sex.py              # Sex of the passenger
+| | |____ageband.py         # Age Band of the passenger
+| | |____is_alone.py        # Is Passenger travelling alone
+| | |____survived.py        # Survived or not
+| | |____embarked.py        # Embarked or not
+| | |____fareband.py        # Fare Band of the passenger
+| | |____title.py           # Title of the passenger
 |____notebooks
-| |____titanic_spark.ipynb
+| |____titanic_spark.ipynb # File showing how to use the generated entities in a notebook
 
 ```
 

@@ -32,24 +32,24 @@ layer start
 ```yaml
 .
 |____.layer
-| |____project.yaml
+| |____project.yaml  # Project configuration file
 |____models
-| |____fraud_detection_model
-| | |____requirements.txt
-| | |____fraud_detection_model.yaml
-| | |____model.py
+| |____fraud_detection_model   
+| | |____requirements.txt     # Environment config file
+| | |____fraud_detection_model.yaml # Training directives of our model
+| | |____model.py    # Source code of the fraud detection model
 |____README.md
 |____data
-| |____transactions
-| | |____transaction_dataset.yaml
+| |____transactions # feature definitions
+| | |____transaction_dataset.yaml # Declares the metadata of the features 
 | |____transaction_features
-| | |____new_balance_dest.sql
-| | |____old_balance_orig.sql
-| | |____error_balance_dest.sql
-| | |____is_fraud.sql
-| | |____type.sql
-| | |____transaction_features.yaml
-| | |____new_balance_orig.sql
-| | |____error_balance_orig.sql
-| | |____old_balance_dest.sql
+| | |____new_balance_dest.sql   # New Balance on the destination account
+| | |____old_balance_orig.sql   # Old Balance on the originating account
+| | |____error_balance_dest.sql # Error Balance on the destination account
+| | |____is_fraud.sql           # Our target value
+| | |____type.sql               # Type of the transaction feature
+| | |____transaction_features.yaml # Declares where our source `transactions` dataset is
+| | |____new_balance_orig.sql    # New Balance on the originating account
+| | |____error_balance_orig.sql # Error Balance on the originating account
+| | |____old_balance_dest.sql   # Old Balance on the destination account
 ```
