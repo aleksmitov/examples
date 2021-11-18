@@ -26,7 +26,43 @@ To check out the Layer Titanic Survival example, run:
 layer clone https://github.com/layerml/examples
 cd examples/titanic/hyperparametertuning
 ```
+Folder structure:
+```yaml
+.
+|____.layer
+| |____project.yaml
+|____models
+| |____survival_model_grid_search
+| | |____survival_model_grid_search.yaml
+| | |____requirements.txt
+| | |____model.py
+| |____survival_model_manual_search
+| | |____requirements.txt
+| | |____survival_model_manual_search.yaml
+| | |____model.py
+| |____survival_model_random_search
+| | |____requirements.txt
+| | |____survival_model_random_search.yaml
+| | |____model.py
+| |____survival_model_bayesian_search
+| | |____requirements.txt
+| | |____model.py
+| | |____survival_model_bayesian_search.yaml
+|____README.md
+|____data
+| |____titanic_data
+| | |____titanic_data.yaml
+| |____passenger_features
+| | |____ageband.sql
+| | |____fareband.sql
+| | |____title.sql
+| | |____is_alone.sql
+| | |____survived.sql
+| | |____passenger_features.yaml
+| | |____embarked.sql
+| | |____sex.sql
 
+```
 
 And, now you are ready to run the project:
 

@@ -27,27 +27,32 @@ layer start
 
 ```yaml
 .
-├── .layer
-├── data
-│   ├── sms_featureset
-│   │   ├── is_spam
-│   │   │   ├── feature.py			# Source code of the `is_spam` feature. We do basic labelencoding.
-│   │   │   ├── requirements.txt	        # Environment config file for the `is_spam` feature
-│   │   ├── message
-│   │   │   ├── feature.py			# Source code of the `message` feature. We remove stop words and lemmatize messages.
-│   │   │   ├── requirements.txt	        # Environment config file for the `message` feature
-│   │   └── dataset.yml
-│   └── spam_data
-│       └── dataset.yml				# Declares where our source `spam_messages` dataset is
-├── models
-│   └── vectorizer
-│       ├── model.yml				# Training directives of our model
-│       ├── model.py				# Source code of the `Vectorizer` model
-│       └── requirements.txt		        # Environment config file
-│   └── spam_detection
-│       ├── model.yml				# Training directives of our model
-│       ├── model.py				# Source code of the `Spam Detection` model
-│       └── requirements.txt		        # Environment config file
-└── README.md
+|____.layer
+| |____project.yaml               # Project configuration file
+|____models
+| |____vectorizer
+| | |____requirements.txt         # Environment config file
+| | |____model.py                 # Source code of the `Vectorizer` model
+| | |____vectorizer_model.yaml    # Training directives of our model
+| |____spam_detection
+| | |____spam_detection_model.yaml  # Training directives of our model
+| | |____requirements.txt           # Environment config file
+| | |____model.py                   # Source code of the `Spam Detection` model
+|____README.md
+|____data
+| |____spam_data
+| | |____spam_data.yaml        # Declares where our source `spam_messages` dataset is
+| |____sms_featureset
+| | |____sms_features.yaml
+| | |____message
+| | | |____requirements.txt     # Environment config file for the `is_spam` feature
+| | | |____feature.py           # Source code of the `message` feature. We remove stop words and lemmatize messages.
+| | |____is_spam
+| | | |____requirements.txt    # Environment config file for the `is_spam` feature
+| | | |____feature.py         # Source code of the `is_spam` feature. We do basic labelencoding.
+|____notebooks
+| |____spam_detection.ipynb   # Notebook showing how to use the generated entities in a Jupyter Notebook
+
+
 ```
 

@@ -31,24 +31,25 @@ layer start
 
 ```yaml
 .
-├── .layer
-├── data
-│   ├── transaction_features		# feature definitions
-│   │   ├── error_balance_dest.sql	# Error Balance on the destination account
-│   │   ├── error_balance_orig.sql	# Error Balance on the originating account
-│   │   ├── is_fraud.sql		# Our target value
-│   │   ├── new_balance_dest.sql	# New Balance on the destination account
-│   │   ├── new_balance_orig.sql	# New Balance on the originating account
-│   │   ├── old_balance_dest.sql	# Old Balance on the destination account
-│   │   ├── old_balance_orig.sql	# Old Balance on the originating account
-│   │   ├── type.sql		        # Type of the transaction feature
-│   │   └── dataset.yml			# Declares the metadata of the features above
-│   └── transaction
-│       └── dataset.yml			# Declares where our source `transactions` dataset is
-├── models
-│   └── fraud_detection_model
-│       ├── model.py			# Source code of the fraud detection model
-│       ├── model.yml			# Training directives of our model
-│       └── requirements.txt		# Environment config file
-└── README.md
+|____.layer
+| |____project.yaml  # Project configuration file
+|____models
+| |____fraud_detection_model   
+| | |____requirements.txt     # Environment config file
+| | |____fraud_detection_model.yaml # Training directives of our model
+| | |____model.py    # Source code of the fraud detection model
+|____README.md
+|____data
+| |____transactions # feature definitions
+| | |____transaction_dataset.yaml # Declares the metadata of the features 
+| |____transaction_features
+| | |____new_balance_dest.sql   # New Balance on the destination account
+| | |____old_balance_orig.sql   # Old Balance on the originating account
+| | |____error_balance_dest.sql # Error Balance on the destination account
+| | |____is_fraud.sql           # Our target value
+| | |____type.sql               # Type of the transaction feature
+| | |____transaction_features.yaml # Declares where our source `transactions` dataset is
+| | |____new_balance_orig.sql    # New Balance on the originating account
+| | |____error_balance_orig.sql # Error Balance on the originating account
+| | |____old_balance_dest.sql   # Old Balance on the destination account
 ```

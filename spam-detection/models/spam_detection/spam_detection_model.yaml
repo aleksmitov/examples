@@ -1,0 +1,19 @@
+# Spam Detection Project Example
+# Models are created by defining  a `.yaml` with any name and adding `type: model`
+
+apiVersion: 1
+
+# Name and description of our model
+name: "spam_detection"
+description: "Spam detection model"
+type: model
+
+training:
+  name: "spam_detection_training"
+  description: "Spam detection model training"
+
+  # The source model definition file with a `train_model` method
+  entrypoint: model.py
+
+  # File includes the required python libraries with their correct versions
+  environment: requirements.txt

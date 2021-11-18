@@ -27,23 +27,21 @@ layer start
 | |____project.yaml
 |____models
 | |____model
-| | |____model.yaml
 | | |____requirements.txt
 | | |____model.py
+| | |____nlp_model.yaml
 |____README.md
 |____data
 | |____spam_data
-| | |____dataset.yaml
+| | |____spam_features.yaml
 | |____sms_featureset
+| | |____spam_features.yaml
 | | |____message
 | | | |____requirements.txt
 | | | |____feature.py
-| | |____dataset.yaml
 | | |____is_spam
 | | | |____requirements.txt
 | | | |____feature.py
 |____notebooks
 | |____spam.ipynb
-
-
 ```

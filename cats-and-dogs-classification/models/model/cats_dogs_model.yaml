@@ -1,0 +1,23 @@
+# New Project Example
+# Models are created by defining  a `.yaml` with any name and adding `type:model`
+
+apiVersion: 1
+
+# Name and description of our model
+name: "cat_dog_model"
+description: "Image classification model"
+type: model
+
+training:
+  name: cat_dog_model_training
+  description: "Model Training"
+
+  # The source model definition file with a `train_model` method
+  entrypoint: model.py
+
+  # File includes the required python libraries with their correct versions
+  environment: requirements.txt
+  
+  # The software and hardware environment needed for this training, 
+  # as defined in https://docs.beta.layer.co/docs/reference/fabrics
+  fabric: "f-medium"

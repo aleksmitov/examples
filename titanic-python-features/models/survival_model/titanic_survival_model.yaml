@@ -1,0 +1,19 @@
+# Titanic Survival Project Example
+# Models are created by defining  a `.yaml` with any name and adding `type: model`
+
+apiVersion: 1
+
+# Name and description of our model
+name: "titanic_survival_model_pred"
+description: "Titanic survival predictor"
+type: model
+
+training:
+  name: survival_model_training
+  description: "Titanic Survival Model Training"
+
+  # The source model definition file with a `train_model` method
+  entrypoint: model.py
+
+  # File includes the required python libraries with their correct versions
+  environment: requirements.txt

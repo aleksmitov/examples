@@ -1,0 +1,19 @@
+# Spam Detection Project Example
+# Models are created by defining  a `.yaml` with any name and adding `type: model`
+
+apiVersion: 1
+
+# Name and description of our model
+name: "tfidf_vectorizer"
+description: "Vectorizer model"
+type: model
+
+training:
+  name: "tfidf_vectorizer_training"
+  description: "Vectorizer model training"
+
+  # The source model definition file with a `train_model` method
+  entrypoint: model.py
+
+  # File includes the required python libraries with their correct versions
+  environment: requirements.txt

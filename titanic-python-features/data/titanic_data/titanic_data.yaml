@@ -1,0 +1,16 @@
+# Titanic Survival Project Example
+# Datasets are created by defining  a `.yaml` with any name and adding `type: dataset`
+# In this file, we will integrate a source table from the Layer Demo
+# Snowflake database. This source table is the Titanic dataset from
+# Kaggle (https://www.kaggle.com/c/titanic/data)
+
+apiVersion: 1
+
+# Unique name of this dataset which will be used in this project to
+# refer to this dataset
+name: "titanic"
+type: dataset
+
+materialization:
+    target: layer-public-datasets
+    table_name: "titanic"

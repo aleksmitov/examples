@@ -1,0 +1,11 @@
+# New Project Example
+# Datasets are created by defining a `.yaml` with any name and adding `type:dataset`
+apiVersion: 1
+# Unique name of this dataset which will be used in this project to
+# refer to this dataset
+name: "catsdogs"
+type: dataset
+
+materialization:
+    target: layer-public-datasets
+    table_name: "catsdogs"

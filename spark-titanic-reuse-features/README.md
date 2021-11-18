@@ -30,22 +30,22 @@ layer start
 ## File Structure
 
 ```yaml
-..
+.
 |____.layer
 | |____project.yaml
 |____models
 | |____survival_model
-| | |____model.yaml
+| | |____survival_model_spark.yaml
 | | |____requirements.txt
 | | |____model.py
 |____README.md
 |____data
 | |____titanic_data
-| | |____dataset.yaml
+| | |____titanic_data.yaml
 | |____passenger_features
+| | |____modified_passenger_features.yaml
 | | |____requirements.txt
 | | |____features.py
-| | |____dataset.yaml
 
 ```
 

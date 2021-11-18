@@ -28,24 +28,24 @@ layer start
 ## File Structure
 
 ```yaml
+.
 |____.layer
 | |____project.yaml
 |____models
 | |____survival_model
-| | |____model.yaml
 | | |____requirements.txt
+| | |____titanic_survival_model.yaml
 | | |____model.py
 |____README.md
 |____data
 | |____titanic_data
-| | |____dataset.yaml
+| | |____titanic_data.yaml
 | |____features_from_passengers
+| | |____features_from_passengers.yaml
 | | |____requirements.txt
 | | |____sex.py
 | | |____ageband.py
-| | |____survived.py
 | | |____embarked.py
-| | |____dataset.yaml
-| | |____fareband.py
+
 ```
 

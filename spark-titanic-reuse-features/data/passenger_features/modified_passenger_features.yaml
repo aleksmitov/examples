@@ -1,0 +1,21 @@
+#Featuresets are created by defining  a `.yaml` with any name and adding `type: featureset`
+
+apiVersion: 1
+
+type: featureset
+
+name: "modified_passenger_features"
+description: "Sex column dropped from passenger featureset"
+
+# Name of the predefined fabric config for all features.
+# Documentation (https://docs.beta.layer.co/docs/reference/fabrics)
+fabric: "f-spark-xsmall"
+
+features:
+  - name: features
+    description: "Fetch all features"
+    source: features.py
+    environment: requirements.txt
+
+materialization:
+    target: layer-public-datasets

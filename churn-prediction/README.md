@@ -40,22 +40,20 @@ layer start
 | |____project.yaml
 |____models
 | |____churn_prediction
-| | |____model.yaml
 | | |____requirements.txt
 | | |____model.py
+| | |____churn_model.yaml
 |____README.md
 |____data
 | |____event_log
-| | |____dataset.yaml
+| | |____event_log_data.yaml
 | |____user_features
 | | |____is_churned.sql
 | | |____count_help_view.sql
+| | |____event_log_features.yaml
 | | |____count_error.sql
 | | |____gender.sql
 | | |____count_thumbs_up.sql
 | | |____count_login.sql
 | | |____count_thumbs_down.sql
-| | |____dataset.yaml
-
-
 ```
