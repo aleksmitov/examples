@@ -1,0 +1,20 @@
+# Spark Recommender Project
+# Models are created by defining  a `.yaml` with any name and adding `type:model`
+
+apiVersion: 1
+
+# Name and description of our model
+name: "spark_recommender_system"
+type: model
+description: "Spark recommender system"
+
+training:
+  name: spark_recommender_system_training
+  description: "Spark recommender system training"
+
+  # The source model definition file with a `train_model` method
+  entrypoint: spark_model.py
+  fabric: "f-spark-large"
+
+  # File includes the required python libraries with their correct versions
+  environment: requirements.txt
