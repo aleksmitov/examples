@@ -25,6 +25,11 @@ To run the project:
 layer start
 ```
 
+## Layer Titanic Project Notebook
+
+We have created an example notebook for the Titanic Project. It includes many examples from fetching a featureset to making an inference. Feel free to check it out here:
+https://github.com/layerml/examples/blob/main/titanic/notebooks/TitanicSurvivalNotebook.ipynb
+
 ## File Structure
 
 ```yaml
