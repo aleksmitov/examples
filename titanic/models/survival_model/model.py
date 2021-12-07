@@ -43,8 +43,8 @@ def train_model(train: Train, pf: Featureset("passenger_features")) -> Any:
     X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                         test_size=test_size)
 
-    # Here we register input & output of the train. Layer will use
-    # this registers to extract the signature of the model and calculate
+    # Here we register input and output of the train. Layer uses
+    # these registers to extract the signature of the model and calculate
     # the drift
     train.register_input(X_train)
     train.register_output(y_train)
@@ -55,7 +55,7 @@ def train_model(train: Train, pf: Featureset("passenger_features")) -> Any:
 
     # We can log parameters of this train. Later we can compare
     # parameters of different versions of this model in the Layer
-    # Web interface
+    # web interface
     train.log_parameter("n_estimators", estimators)
 
     # We fit our model with the train and the label data
