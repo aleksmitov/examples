@@ -1,8 +1,0 @@
-# Churn Prediction Project Example
-#
-# Project configuration file
-
-apiVersion: 1
-
-# Name of your project
-name: "Churn_Prediction"
