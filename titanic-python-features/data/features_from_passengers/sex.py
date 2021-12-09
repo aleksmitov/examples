@@ -1,6 +1,6 @@
 import pandas as pd
 from typing import Any
-from layer import Dataset
+from layer import Context, RawDataset
 
 
 def clean_sex(sex):
@@ -12,7 +12,7 @@ def clean_sex(sex):
     return result
 
 
-def build_feature(sdf: Dataset("titanic")) -> Any:
+def build_feature(context: Context, sdf: RawDataset("titanic")) -> Any:
     df = sdf.to_pandas()
     feature_data = df[["PASSENGERID", "SEX"]]
     sex = df['SEX'].apply(clean_sex)

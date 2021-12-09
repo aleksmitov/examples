@@ -1,9 +1,9 @@
 from typing import Any
-from layer import Dataset
+from layer import Context, RawDataset
 import numpy as np
 
 
-def build_feature(sdf: Dataset("catsdogs")) -> Any:
+def build_feature(context: Context, sdf: RawDataset("catsdogs")) -> Any:
     df = sdf.to_pandas()
     df = df.sample(200, random_state=1)
     df = df[df['path'] != 'single_prediction']

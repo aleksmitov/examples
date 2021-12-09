@@ -2,10 +2,10 @@ from typing import Any
 
 from pyspark.sql.functions import avg, col, when
 
-from layer import Dataset
+from layer import Context, RawDataset
 
 
-def build_feature(passengers: Dataset("titanic_dataset")) -> Any:
+def build_feature(context: Context, passengers: RawDataset("titanic_dataset")) -> Any:
     passengers_df = passengers.to_spark()
 
     avg_age_df = passengers_df \
