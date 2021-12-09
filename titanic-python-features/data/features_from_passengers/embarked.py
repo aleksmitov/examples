@@ -1,6 +1,6 @@
 import pandas as pd
 from typing import Any
-from layer import Context, RawDataset
+from layer import Context, Dataset
 
 
 def clean_embark(embark):
@@ -16,7 +16,7 @@ def clean_embark(embark):
     return result
 
 
-def build_feature(context: Context, sdf: RawDataset("titanic")) -> Any:
+def build_feature(context: Context, sdf: Dataset("titanic")) -> Any:
     df = sdf.to_pandas()
     feature_data = df[["PASSENGERID", "EMBARKED"]]
     embark = feature_data['EMBARKED'].apply(clean_embark)

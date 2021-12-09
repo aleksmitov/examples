@@ -1,6 +1,6 @@
 import pandas as pd
 from typing import Any
-from layer import Context, RawDataset
+from layer import Context, Dataset
 
 
 def clean_age(data):
@@ -17,7 +17,7 @@ def clean_age(data):
         return age
 
 
-def build_feature(context: Context, sdf: RawDataset("titanic")) -> Any:
+def build_feature(context: Context, sdf: Dataset("titanic")) -> Any:
     df = sdf.to_pandas()
     feature_data = df[["PASSENGERID", "AGE","PCLASS"]]
     age = feature_data[['AGE', 'PCLASS']].apply(clean_age, axis=1)
