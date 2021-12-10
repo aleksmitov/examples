@@ -4,10 +4,10 @@ from string import punctuation
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import nltk
-from layer import Dataset
+from layer import Context, Dataset
 
 
-def build_feature(sdf: Dataset("spam_messages")) -> Any:
+def build_feature(context: Context, sdf: Dataset("spam_messages")) -> Any:
     init()
 
     df = sdf.to_pandas()

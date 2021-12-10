@@ -1,9 +1,9 @@
 from typing import Any
-from layer import Dataset
+from layer import Context, Dataset
 from sklearn.preprocessing import LabelEncoder
 
 
-def build_feature(sdf: Dataset("spam_messages")) -> Any:
+def build_feature(context: Context, sdf: Dataset("spam_messages")) -> Any:
 
     df = sdf.to_pandas()
     feature_data = df[["id", "label"]]
