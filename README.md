@@ -72,22 +72,10 @@ You will see something similar to this on the terminal:
 LAYER RUN SUCCEEDED in 61166ms
 
 ```
-Layer runs your project and places the generated entities in a [data](https://docs.beta.layer.co/docs/data/data-catalog) and [model catalog](https://docs.beta.layer.co/docs/modelcatalog). 
-
-## The data catalog
-The [Layer Data Catalog](https://docs.beta.layer.co/docs/data/data-catalog) is a central repository for your feature sets so that they can be systematically built, monitored, and evaluated to reduce the cost of errors. 
-The first link generated on the terminal will take you to the data catalog:
-
-![Data Catalog](images/datacatalog.png)
-
-## Layer Model Catalog
-The [Layer Model Catalog](https://docs.beta.layer.co/docs/modelcatalog) provides a centralized, managed, indexed storage space for ML models. It ensures that model artifacts are versioned and immutable
-The second link that was generated on the terminal takes you to the Model Catalog:
-
-![Model Catalog](images/modelcatalog.png)
+Layer runs your project and places the generated entities in a the appropriate Discover tabs. 
 
 ## Deploying the model 
-You can [deploy your model](https://docs.beta.layer.co/docs/quickstart#deploy-your-model) by clicking the Deploy button next to the model in the Model Catalog. 
+You can [deploy your model](https://docs.beta.layer.co/docs/quickstart#deploy-your-model) by clicking the Deploy button next to the model in the Models tab. 
 
 ![Deploy Model](images/deploy.png)
 
