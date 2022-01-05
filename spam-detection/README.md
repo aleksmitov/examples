@@ -1,6 +1,6 @@
 # Spam Detection Project Example
 
-An NLP example with `nltk` library to predict the spam SMS messages. In this project, we are going to use Python Features to remove stop words and to lemmatize messages. Also, we are going to load an ML model from the Layer Model Catalog to create training data for the `spam_detection` model.
+An NLP example with `nltk` library to predict the spam SMS messages. In this project, we are going to use Python Features to remove stop words and to lemmatize messages. Also, we are going to load an ML model from the Layer Models tab to create training data for the `spam_detection` model.
 
 ## What we are going to learn?
 

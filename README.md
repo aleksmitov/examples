@@ -72,10 +72,10 @@ You will see something similar to this on the terminal:
 LAYER RUN SUCCEEDED in 61166ms
 
 ```
-Layer runs your project and places the generated entities in a [data](https://docs.beta.layer.co/docs/data/data-catalog) and [model catalog](https://docs.beta.layer.co/docs/modelcatalog). 
+Layer runs your project and places the generated entities in a the appropriate Discover tabs. 
 
 ## Deploying the model 
-You can [deploy your model](https://docs.beta.layer.co/docs/quickstart#deploy-your-model) by clicking the Deploy button next to the model in the Model Catalog. 
+You can [deploy your model](https://docs.beta.layer.co/docs/quickstart#deploy-your-model) by clicking the Deploy button next to the model in the Models tab. 
 
 ![Deploy Model](images/deploy.png)
 
