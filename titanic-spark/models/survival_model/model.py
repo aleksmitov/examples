@@ -4,10 +4,10 @@ from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
-from layer import Featureset, Train
+from layer import Featureset, Context
 
 
-def train_model(train: Train, pf: Featureset("passenger_features_spark")) -> Any:
+def train_model(context: Context, pf: Featureset("passenger_features_spark")) -> Any:
     passenger_df = pf.to_spark()
 
     feat_cols = ['AGE_BAND', 'EMBARK_STATUS', 'FARE_BAND', 'IS_ALONE', 'SEX', 'TITLE']
@@ -18,6 +18,7 @@ def train_model(train: Train, pf: Featureset("passenger_features_spark")) -> Any
 
     test_size = 0.2
     training_size = 0.8
+    train = context.train()
     train.log_parameter("test_size", test_size)
     seed = 42
     train.log_parameter("seed", seed)

@@ -6,7 +6,7 @@ should have a definition file like this one.
 
 """
 from typing import Any
-from layer import Featureset, Train, Dataset
+from layer import Featureset, Dataset, Context
 from PIL import Image
 import io
 import base64
@@ -18,8 +18,8 @@ from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropou
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 
-def train_model(train: Train, ds:Dataset("catsdogs"), pf: Featureset("cat_and_dog_features")) -> Any:
-    # train: Train, df:Dataset("cats-and-dogs-classification"), pf: Featureset("animal_features")
+def train_model(context: Context, ds:Dataset("catsdogs"), pf: Featureset("cat_and_dog_features")) -> Any:
+    # context: Context, df:Dataset("cats-and-dogs-classification"), pf: Featureset("animal_features")
     """Model train function
     This function is a reserved function and will be called by Layer
     when we want this model to be trained along with the parameters.
@@ -28,7 +28,7 @@ def train_model(train: Train, ds:Dataset("catsdogs"), pf: Featureset("cat_and_do
     featuresets or models) from Layer.
 
     Args:
-        train (layer.Train): Represents the current train of the model, passed by
+        context (layer.Context): Represents the current context of the model, passed by
             Layer when the training of the model starts.
         pf (spark.DataFrame): Layer will return all features inside the
             `features` featureset as a spark.DataFrame automatically
@@ -43,6 +43,7 @@ def train_model(train: Train, ds:Dataset("catsdogs"), pf: Featureset("cat_and_do
     testing_set = df[(df['path'] == 'test_set/dogs') | (df['path'] == 'test_set/cats')]
     X_train = np.stack(training_set['content'].map(load_process_images))
     X_test = np.stack(testing_set['content'].map(load_process_images))
+    train = context.train()
     train.register_input(X_train)
     train.register_output(df['category'])
     train_datagen = ImageDataGenerator(rescale=1. / 255,

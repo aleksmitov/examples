@@ -9,10 +9,10 @@ from typing import Any
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from layer import Featureset, Train
+from layer import Featureset, Context
 
 
-def train_model(train: Train, pf: Featureset("passenger_features")) -> Any:
+def train_model(context: Context, pf: Featureset("passenger_features")) -> Any:
     """Model train function
 
     This function is a reserved function and will be called by Layer
@@ -22,7 +22,7 @@ def train_model(train: Train, pf: Featureset("passenger_features")) -> Any:
     featuresets or models) from Layer.
 
     Args:
-        train (layer.Train): Represents the current train of the model, passed by
+        context (layer.Context): Represents the current context of the model, passed by
             Layer when the training of the model starts.
         pf (layer.Featureset): Layer will return a Featureset object,
             an interface to access the features inside the
@@ -39,6 +39,7 @@ def train_model(train: Train, pf: Featureset("passenger_features")) -> Any:
 
     # Split dataset into training set and test set
     test_size = 0.2
+    train = context.train()
     train.log_parameter("test_size", test_size)
     X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                         test_size=test_size)

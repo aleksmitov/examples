@@ -1,7 +1,7 @@
 # Spam Detection Project Example
 
 from typing import Any
-from layer import Featureset, Train, Model
+from layer import Featureset, Context, Model
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 from sklearn.naive_bayes import MultinomialNB
@@ -11,7 +11,7 @@ from sklearn.metrics import (
 )
 
 
-def train_model(train: Train, model: Model("tfidf_vectorizer"), sf: Featureset("sms_featureset")) -> Any:
+def train_model(context: Context, model: Model("tfidf_vectorizer"), sf: Featureset("sms_featureset")) -> Any:
 
     data = sf.to_pandas()
     vectorizer = model.get_train()
@@ -31,6 +31,7 @@ def train_model(train: Train, model: Model("tfidf_vectorizer"), sf: Featureset("
     X_test_trans = vectorizer.transform(X_test).toarray()
 
     # Register input and output data of the model
+    train = context.train()
     train.register_input(X_train_trans)
     train.register_output(y_train)
 
